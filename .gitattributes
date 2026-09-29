@@ -1,0 +1,18 @@
+# Normalize text in the repo to LF regardless of the ambient core.autocrlf
+# setting (this machine's Git for Windows sets core.autocrlf=true system-wide,
+# which would otherwise rewrite every CSV on checkout).
+* text=auto eol=lf
+
+*.py   text eol=lf
+*.sql  text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+*.csv  text eol=lf
+
+# Binary deliverables - never diff, never convert line endings
+*.pbix binary
+*.pdf  binary
+*.gz   binary
+*.db   binary
+*.xlsx binary
+*.docx binary
